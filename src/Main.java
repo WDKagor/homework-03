@@ -81,19 +81,56 @@ public class Main {
         byte numberOfBananas = 8;
         byte bananaWeightInGr = 80;
         short milkInMl = 200;
-        byte weightOf100MlMilkInGr = 105;
+        byte weighedStandardMl = 100;
+        byte weightOfStandardMilkInGr = 105;
         byte IceCreamInBriquettes = 2;
         byte briquetteWeightInGr = 100;
         byte numberOfEggs = 4;
         byte weightOfEggInGr = 70;
         short grPerKg = 1000;
         short totalWeightOfBananas = (short) (numberOfBananas * bananaWeightInGr);
-        short totalWeightOfMilk = (short) (milkInMl / 100 * weightOf100MlMilkInGr);
+        short totalWeightOfMilk = (short) (milkInMl / weighedStandardMl * weightOfStandardMilkInGr);
         short totalWeightOfIceCream = (short) (IceCreamInBriquettes * briquetteWeightInGr);
         short totalWeightOfEggs = (short) (numberOfEggs * weightOfEggInGr);
         int totalBreakfastWeightInGr = totalWeightOfBananas + totalWeightOfMilk + totalWeightOfIceCream + totalWeightOfEggs;
         double totalBreakfastWeightInKg = (double) totalBreakfastWeightInGr / grPerKg;
         System.out.println("Вес завтрака спортсмена составил " + totalBreakfastWeightInGr + " граммов, или " + totalBreakfastWeightInKg + " килограммов");
+
+        System.out.println("   ");
+        System.out.println("Задача 7");
+        byte weightLossInKg = 7;
+        short weightLossInGr = (short) (weightLossInKg * grPerKg);
+        short weightLossRatePerDayInGr01 = 250;
+        short weightLossRatePerDayInGr02 = 500;
+        short needDaysFtNormalRate01 = (short) (weightLossInGr / weightLossRatePerDayInGr01);
+        short needDaysFtNormalRate02 = (short) (weightLossInGr / weightLossRatePerDayInGr02);
+        System.out.println("Если спортсмен будет терять каждый день " + weightLossRatePerDayInGr01 + " граммов веса, тогда, чтобы сбросить " + weightLossInKg + " килограммов, ему потребуется " + needDaysFtNormalRate01 + " дней.");
+        System.out.println("Если спортсмен будет терять каждый день " + weightLossRatePerDayInGr02 + " граммов веса, тогда, чтобы сбросить " + weightLossInKg + " килограммов, ему потребуется " + needDaysFtNormalRate02 + " дней.");
+
+        System.out.println("   ");
+        System.out.println("Задача 8");
+        int curSalaryInMonthMasha = 67760;
+        int curSalaryInMonthDenis = 83690;
+        int curSalaryInMonthChristina = 76230;
+        byte numberMonthsInYear = 12;
+        int curSalaryInYearMasha = curSalaryInMonthMasha * numberMonthsInYear;
+        int curSalaryInYearDenis = curSalaryInMonthDenis * numberMonthsInYear;
+        int curSalaryInYearChristina = curSalaryInMonthChristina * numberMonthsInYear;
+        byte percentageOfCurrentSalary = 100;
+        byte percentageOfSalaryIncrease = 10;
+        double salaryIndex = (double) (percentageOfCurrentSalary + percentageOfSalaryIncrease) / percentageOfCurrentSalary;
+        int incSalaryInMonthMasha = (int) (curSalaryInMonthMasha * salaryIndex);
+        int incSalaryInMonthDenis = (int) (curSalaryInMonthDenis * salaryIndex);
+        int incSalaryInMonthChristina = (int) (curSalaryInMonthChristina * salaryIndex);
+        int incSalaryInYearMasha = incSalaryInMonthMasha * numberMonthsInYear;
+        int incSalaryInYearDenis = incSalaryInMonthDenis * numberMonthsInYear;
+        int incSalaryInYearChristina = incSalaryInMonthChristina * numberMonthsInYear;
+        int incInAnnualIncomeMasha = incSalaryInYearMasha - curSalaryInYearMasha;
+        int incInAnnualIncomeDenis = incSalaryInYearDenis - curSalaryInYearDenis;
+        int incInAnnualIncomeChristina = incSalaryInYearChristina - curSalaryInYearChristina;
+        System.out.println("Маша теперь получает " + incSalaryInMonthMasha + " рублей в месяц. Годовой доход вырос на " + incInAnnualIncomeMasha + " рублей");
+        System.out.println("Денис теперь получает " + incSalaryInMonthDenis + " рублей в месяц. Годовой доход вырос на " + incInAnnualIncomeDenis + " рублей");
+        System.out.println("Кристина теперь получает " + incSalaryInMonthChristina + " рублей в месяц. Годовой доход вырос на " + incInAnnualIncomeChristina + " рублей");
 
 
 
