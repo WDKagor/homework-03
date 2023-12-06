@@ -32,6 +32,38 @@ public class Main {
         System.out.println("Значение переменной g с типом byte равно " + g);
 
         System.out.println("Задача 3");
+        byte studentsOfLyudmilaP = 23;
+        byte studentsOfAnnaS = 27;
+        byte studentsOfEkaterinaA = 30;
+        short totalPaperPurchased = 480;
+        int totalStudents = studentsOfLyudmilaP + studentsOfAnnaS + studentsOfEkaterinaA;
+        int amountOfPaperPerStudent = totalPaperPurchased / totalStudents;
+        System.out.println("На каждого ученика рассчитано " + amountOfPaperPerStudent + " листов бумаги");
+
+        System.out.println("Задача 4");
+        byte standardTimeInMinutes = 2;
+        byte bottlesProducedWithStandTime = 16;
+        byte minPerHour = 60;
+        byte hoursInADay = 24;
+        byte daysInAMonth = 30;
+        byte reportingTime01InMinutes = 20;
+        int bottlesProducedRepTime01 = reportingTime01InMinutes / standardTimeInMinutes * bottlesProducedWithStandTime;
+        System.out.println("За 20 мин машина произвела " + bottlesProducedRepTime01 + " штук бутылок");
+        byte reportingTime02InHours = 1;
+        int reportingTime02InMinutes = reportingTime02InHours * minPerHour;
+        int bottlesProducedRepTime02 = reportingTime02InMinutes / standardTimeInMinutes * bottlesProducedWithStandTime;
+        System.out.println("За сутки машина произвела " + bottlesProducedRepTime02 + " штук бутылок");
+        byte reportingTime03InDays = 3;
+        int reportingTime03InMinutes = reportingTime03InDays * hoursInADay * minPerHour;
+        int bottlesProducedRepTime03 = reportingTime03InMinutes / standardTimeInMinutes * bottlesProducedWithStandTime;
+        System.out.println("За 3 дня машина произвела " + bottlesProducedRepTime03 + " штук бутылок");
+        byte reportingTime04InMonths = 1;
+        int reportingTime04InMinutes = reportingTime04InMonths * daysInAMonth * hoursInADay * minPerHour;
+        int bottlesProducedRepTime04 = reportingTime04InMinutes / standardTimeInMinutes * bottlesProducedWithStandTime;
+        System.out.println("За месяц машина произвела " + bottlesProducedRepTime04 + " штук бутылок");
+
+
+
 
 
 
